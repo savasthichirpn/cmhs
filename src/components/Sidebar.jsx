@@ -5,7 +5,7 @@ import { Image } from '@chakra-ui/react'
 
 import { useState } from "react"
 import PolictManual from '../../dist/assets/PDF/CMHS_HR_book.pdf';
-import HumanResourcePolicyManual from "./Model/HumanResourcePolicyManual"
+import HumanResourcePolicyManual from "./model/HumanResourcePolicyManual"
 
 export default function Sidebar() {
 
