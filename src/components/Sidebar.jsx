@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 import { Image } from '@chakra-ui/react'
 
 import { useState } from "react"
-import PolictManual from '../../dist/assets/PDF/CMHS_HR_book.pdf';
+import PolictManual from '../../dist/assets/CMHS_HR_book-6edd46fc.pdf';
 import HumanResourcePolicyManual from "./model/HumanResourcePolicyManual"
 
 export default function Sidebar() {
