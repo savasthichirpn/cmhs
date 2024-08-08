@@ -55,14 +55,10 @@ export default function ShopLoginForce() {
                 <Image src='https://www.cmhsma.org/portal/images/CMHS_logo2-2yzznp96yh6tvu9xzgyvi8.png' alt='Dan Abramov' />
             </Box>
             <Flex align={'center'} justify={'center'}>
-                <Stack spacing={4} mx={'auto'} w={'700px'} p={6} border={'1px solid #ddd'}>
+                <Stack spacing={4} mx={'auto'} w={'750px'} p={6} border={'1px solid #ddd'}>
                     <Stack align={'left'}>
-                        <Heading fontSize={'1.3em'} color={'#5a5a5a'} borderBottom={'1px solid #ddd'} py={'4'}
-                            fontWeight={'500'} textTransform={'uppercase'}>
-                            Previous users can just login
-                        </Heading>
-                        <Text fontSize={'l4px'} color={'#777'} fontFamily={'Open Sans'} fontWeight={'700'} textTransform={'uppercase'}>
-                            Login
+                        <Text fontSize={'1.5rem'} color={'#777'} textAlign={'center'} fontFamily={'Open Sans'} fontWeight={'700'} textTransform={'uppercase'}>
+                            Employee Login
                         </Text>
                     </Stack>
 
@@ -71,7 +67,7 @@ export default function ShopLoginForce() {
                             <Flex direction={'column'} gap={5} justify={'center'}>
                                 <Flex width={'full'} direction={'column'}>
                                     <label >Email address</label>
-                                    <Input {...loginCredential('email')} width={'full'} height={'44px'} type="email" name={'email'}
+                                    <Input {...loginCredential('email')} width={'full'} mt={'4px'} height={'44px'} type="email" name={'email'}
                                         fontSize={{ 'base': 'sm', 'md': 'md' }}
                                         color={'text.grey-4'} borderRadius={'4px'}
                                     />
@@ -81,18 +77,18 @@ export default function ShopLoginForce() {
                                 </Flex>
 
                                 <Flex position={'relative'} width={'full'} direction={'column'}>
-                                    <label >Password</label>
+                                    <label>Password</label>
                                     <Input {...loginCredential('password')}
-                                        width={'full'} height={'44px'} type={showPassword ? 'text' : 'password'} name={'password'}
+                                        width={'full'} height={'44px'} mt={'4px'} type={showPassword ? 'text' : 'password'} name={'password'}
                                         color={'text.grey-4'} borderRadius={'4px'}
                                     />
                                     {
                                         showPassword ?
                                             <Box onClick={() => setShowPassword(false)}
-                                                zIndex={99} position={'absolute'} top={9} right={4} cursor={'pointer'} userSelect={'none'}>
+                                                zIndex={1} position={'absolute'} top={9} right={4} cursor={'pointer'} userSelect={'none'}>
                                                 <HidePassword />
                                             </Box> : <Box onClick={() => setShowPassword(true)}
-                                                zIndex={99} position={'absolute'} top={9} right={4} cursor={'pointer'} userSelect={'none'}>
+                                                zIndex={1} position={'absolute'} top={9} right={4} cursor={'pointer'} userSelect={'none'}>
                                                 <ShowPassword />
                                             </Box>
                                     }
@@ -100,12 +96,12 @@ export default function ShopLoginForce() {
                                         <Box as="p" className="error-css" color={'red'} fontSize={'14px'}>{errors?.password?.message}</Box>
                                     )}
                                 </Flex>
-                                <Box fontWeight={400} textAlign={'right'} fontSize={{ 'base': 'sm', 'md': '14px' }} color={'blue.600'}
+                                <Box fontWeight={400} textAlign={'right'} mt={'-10px'} fontSize={{ 'base': 'sm', 'md': '14px' }} color={'blue.600'}
                                     cursor={'pointer'}
                                     _hover={{ textDecoration: 'underline' }}>
                                     {` Forgot Password?`}
                                 </Box>
-                                <Box width={'full'} height={'40px'}>
+                                <Box width={'full'} height={'40px'} mt={6}>
                                     <Button width={'full'} type={'submit'}
                                     color={'white'} fontWeight={700} mt={3} _hover={{'opacity' : '0.8'}}
                                         fontSize={'15px'} bg={'#5a5a5a'}
