@@ -1,3 +1,5 @@
+import '@fontsource/open-sans'; // Ensure the font name is correct
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -12,6 +14,7 @@ import Create, { createAction } from './pages/Create'
 import Profile from './pages/Profile'
 import ClinicalConsultationForm from './pages/ClinicalConsultationForm'
 import ShopLoginForce from './pages/ShopLoginForce'
+import LeaveRequest from './pages/Leave-Request'
 
 // router and routes
 const router = createBrowserRouter(
@@ -23,6 +26,7 @@ const router = createBrowserRouter(
         <Route path="create" element={<Create />} action={createAction} />
         <Route path="clinicalconsultationform" element={<ClinicalConsultationForm />} />
         <Route path="profile" element={<Profile />} />
+        <Route path="leave-request" element={<LeaveRequest/>} />
       </Route>
     </>
   )

@@ -34,16 +34,22 @@ export default function ShopLoginForce() {
         )
 
     });
-    const { register: loginCredential, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(validationSchema) });
+    const {
+        register: loginCredential,
+        handleSubmit,
+        formState: { errors }
+    } = useForm({ resolver: yupResolver(validationSchema) });
 
     const onSubmit = async (data) => {
         // event.preventDefault();
         setIsLoading(true)
         try {
             await new Promise(resolve => setTimeout(resolve, 1000));
+            // const formData = await data.response.json(data);
             navigate('/dashboard');
+            console.log(data)
         } catch (error) {
-            // Handle errors (e.g., show error messages)
+            console.log(error)
         } finally {
             setIsLoading(false);
         }

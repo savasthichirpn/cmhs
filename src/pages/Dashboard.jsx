@@ -12,7 +12,8 @@ import {
   HStack,
   Divider,
   Button,
-  Avatar
+  Avatar,
+  Img
 } from "@chakra-ui/react"
 import { useLoaderData } from "react-router-dom"
 
@@ -22,34 +23,22 @@ export default function Dashboard() {
 
   return (
     <SimpleGrid spacing={10} minChildWidth="300px">
-      {tasks && tasks.map(task => (
-        <Card key={task.id} borderTop="8px" borderColor="brand.400" bg="white">
-          <CardHeader color="gray.700">
-            <Flex gap={5}>
-              <Box size="50px">
-                <Avatar name={task.author} src={task.img} />
-              </Box>
-              <Box>
-                <Heading as="h3" size="sm">{task.title}</Heading>
-                <Text>by {task.author}</Text>
-              </Box>
-            </Flex>
-          </CardHeader>
-
-          <CardBody color="gray.500">
-            <Text>{task.description}</Text>
-          </CardBody>
-
-          <Divider borderColor="gray.200" />
-
-          <CardFooter>
-            <HStack>
-              <Button variant="ghost" leftIcon={<ViewIcon />}>Watch</Button>
-              <Button variant="ghost" leftIcon={<EditIcon />}>Comment</Button>
-            </HStack>
-          </CardFooter>
-        </Card>
-      ))}
+      {tasks && tasks.map((task, index) => {
+        return (
+          <Card key={index} borderRadius={'0'} borderTop="8px" borderColor="brand.400" boxShadow='md' border={'0px'} bg="white" >
+              <Flex gap={5} flexFlow={'column'} p={8}>
+              <Flex justifyContent={'center'} alignItems={'center'} borderRadius={'full'} bg={task.color} boxSize='90px'>
+                  <Img  maxW={'55px'} src={task.img} alt=''/>
+                </Flex>
+                <Box>
+                <Heading as="h3" fontSize={'24px'} fontWeight={'700'} mt={4} fontFamily={'open Sans'} color={'#000'}>{task.title}</Heading>
+                <Heading as="h4" fontSize={'18px'} fontWeight={'700'} mt={3} fontFamily={'open Sans'} color={'#000'}>{task.info}</Heading>
+                </Box>
+              </Flex>
+          </Card>
+        )
+      })
+      }
     </SimpleGrid>
   )
 }

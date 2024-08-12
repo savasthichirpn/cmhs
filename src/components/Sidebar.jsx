@@ -63,7 +63,7 @@ export default function Sidebar() {
             </ListItem>
 
             <ListItem>
-              <NavLink to="profile" colorScheme="brand">
+              <NavLink to="/leave-request" colorScheme="brand">
                 <Flex align="baseline">
                   <ListIcon as={ChevronRightIcon} color={'#777'} />
                   <Text as="span" flexGrow={'1'} _hover={{ 'bg': '#f5f5f5', 'color': '#262626'}}>Request for Leave of Absence</Text>
