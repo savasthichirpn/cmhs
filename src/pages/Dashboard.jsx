@@ -26,10 +26,10 @@ export default function Dashboard() {
   )
 }
 
-export const tasksLoader = async () => {
+/*export const tasksLoader = async () => {
   const res = await fetch('http://localhost:3002/tasks')
   return res.json()
-}
+}*/
 
 /*
 import express, { Request, Response } from 'express';
