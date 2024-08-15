@@ -18,8 +18,8 @@ import {
 import { useLoaderData } from "react-router-dom"
 
 export default function Dashboard() {
-  //const tasks = useLoaderData()
-  //console.log(tasks)
+  const tasks = useLoaderData()
+  console.log(tasks)
 
   return (
     <div>Cards will be displayed later</div>
@@ -29,6 +29,7 @@ export default function Dashboard() {
 export const tasksLoader = async () => {
   //const res = await fetch('http://localhost:3002/tasks')
   //return res.json()
+  return 1
 }
 
 /*
